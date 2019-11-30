@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  max-width: 850px;
+}
+.wrapper {
+  max-width: 720px;
+  width: 100%;
+}
+section {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(5, 40vh);
+  grid-template-rows: repeat(5, 100vh);
+  grid-column-gap: 1px;
+}
+
+.box {
+  background-color: black;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+.position {
+  position: relative;
+}
+.paragraph {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.one:hover {
+  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-1.jpg");
+  width: 100%;
+  background-position: center;
+  transform: translate3d(-10%, 0, 0);
+  opacity: 1;
+  background-size: cover;
+}
+
+.two:hover {
+  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-2.jpg");
+  width: 100%;
+  background-position: center;
+  transform: translate3d(-10%, 0, 0);
+  opacity: 1;
+  background-size: cover;
+}
+
+.three:hover {
+  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-3.jpg");
+  width: 100%;
+  background-position: center;
+  transform: translate3d(-10%, 0, 0);
+  opacity: 1;
+  background-size: cover;
+}
+
+.four:hover {
+  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-4.jpg");
+  width: 100%;
+  background-position: center;
+  transform: translate3d(-10%, 0, 0);
+  opacity: 1;
+  background-size: cover;
+}
+
+.five:hover {
+  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-0.jpg");
+  width: 100%;
+  background-position: center;
+  opacity: 1;
+  background-size: cover;
+  transform: translate3d(-10%, 0, 0);
+}
+
+.five:hover::after,
+.four:hover::after {
+  content: "";
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
