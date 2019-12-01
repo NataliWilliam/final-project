@@ -8,10 +8,12 @@
   width: 100%;
   margin: 0 auto;
 }
+
 section {
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(5, 40vh);
+  grid-template-columns: repeat(5, 20vw);
+  /* grid-template-columns: repeat(5, minmax(20vw,100%)); */
   grid-template-rows: repeat(5, 100vh);
   grid-column-gap: 1px;
 }
@@ -30,6 +32,7 @@ a {
   height: 100%;
   text-align: center;
 }
+
 .position {
   position: relative;
 }
@@ -65,4 +68,30 @@ a {
   top: 50%;
   width: 100%;
   text-align: center;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    background-color: black;
+    display: flex;
+  }
+  .display {
+    display: none;
+  }
+  .box {
+    display: block;
+  }
+
+  a {
+    flex-direction: row;
+    color: white;
+  }
+  .paragraph {
+    left: 8vw;
+    font-size: 4.5vw;
+    letter-spacing: 0.7vw;
+    flex-direction: row;
+    color: white;
+  }
 }
