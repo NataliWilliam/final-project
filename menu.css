@@ -1,11 +1,12 @@
 * {
   box-sizing: border-box;
   margin: 0px;
-  max-width: 850px;
+  padding: 0;
 }
 .wrapper {
-  max-width: 720px;
+  max-width: 750;
   width: 100%;
+  margin: 0 auto;
 }
 section {
   background-color: white;
@@ -23,67 +24,56 @@ section {
 a {
   text-decoration: none;
   color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .position {
   position: relative;
 }
 .paragraph {
   text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
   position: absolute;
   top: 50%;
   width: 100%;
   text-align: center;
-  font-size: 12px;
-  letter-spacing: 3px;
 }
 
-.one:hover {
-  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-1.jpg");
-  width: 100%;
-  background-position: center;
-  transform: translate3d(-10%, 0, 0);
+.one:hover div,
+.two:hover div,
+.three:hover div,
+.four:hover div,
+.five:hover div {
   opacity: 1;
-  background-size: cover;
-}
-
-.two:hover {
-  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-2.jpg");
-  width: 100%;
-  background-position: center;
-  transform: translate3d(-10%, 0, 0);
-  opacity: 1;
-  background-size: cover;
-}
-
-.three:hover {
-  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-3.jpg");
-  width: 100%;
-  background-position: center;
-  transform: translate3d(-10%, 0, 0);
-  opacity: 1;
-  background-size: cover;
-}
-
-.four:hover {
-  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-4.jpg");
-  width: 100%;
-  background-position: center;
-  transform: translate3d(-10%, 0, 0);
-  opacity: 1;
-  background-size: cover;
-}
-
-.five:hover {
-  background-image: url("http://ivanaivazovsky.life/assets/img/site-menu-0.jpg");
-  width: 100%;
-  background-position: center;
-  opacity: 1;
-  background-size: cover;
   transform: translate3d(-10%, 0, 0);
 }
 
-.five:hover::after,
-.four:hover::after {
-  content: "";
+.one div,
+.two div,
+.three div,
+.four div,
+.five div {
+  width: 111%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+.one div:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.2;
 }
