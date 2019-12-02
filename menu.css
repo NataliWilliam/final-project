@@ -76,22 +76,19 @@ a {
     background-color: black;
     display: flex;
   }
-  .display {
-    display: none;
-  }
+
   .box {
     display: block;
+    flex-direction: row;
   }
 
   a {
-    flex-direction: row;
     color: white;
   }
   .paragraph {
     left: 8vw;
     font-size: 4.5vw;
     letter-spacing: 0.7vw;
-    flex-direction: row;
     color: white;
   }
 }
