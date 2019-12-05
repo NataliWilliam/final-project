@@ -75,20 +75,29 @@ a {
   section {
     background-color: black;
     display: flex;
+    flex-direction: column;
   }
 
   .box {
     display: block;
     flex-direction: row;
+    height: 20vh;
   }
 
   a {
     color: white;
+    text-align: center;
   }
   .paragraph {
-    left: 8vw;
-    font-size: 4.5vw;
+    font-size: 16px;
     letter-spacing: 0.7vw;
     color: white;
+  }
+  .one:hover div,
+  .two:hover div,
+  .three:hover div,
+  .four:hover div,
+  .five:hover div {
+    display: none;
   }
 }
