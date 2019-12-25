@@ -14,7 +14,7 @@ nav {
   padding: 24px;
 }
 
-a {
+.card {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
@@ -44,7 +44,7 @@ footer {
   padding: 24px;
 }
 
-a:hover {
+.card:hover {
   color: rgb(187, 26, 26);
   transition: all 1s ease-in;
 }
@@ -58,6 +58,103 @@ a:hover {
   padding-right: 12px;
 }
 
+/* menu */
+
+.wrapper {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#sekcija {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(-100vw, 0, 0);
+  z-index: 999;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: 1s all ease;
+  width: 100vw;
+}
+section#sekcija.active {
+  transform: translate(0px, 0px);
+}
+
+#zatvori {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 999999;
+}
+section {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(5, 20vw);
+  /* grid-template-columns: repeat(5, minmax(20vw,100%)); */
+  grid-template-rows: repeat(5, 100vh);
+  grid-column-gap: 1px;
+}
+
+.box {
+  background-color: black;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-1 {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.position {
+  position: relative;
+}
+
+.one:hover div,
+.two:hover div,
+.three:hover div,
+.four:hover div,
+.five:hover div {
+  opacity: 1;
+  transform: translate3d(-10%, 0, 0);
+}
+
+.one div,
+.two div,
+.three div,
+.four div,
+.five div {
+  width: 111%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.paragraph {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+}
+
 @media screen and (max-width: 768px) {
   .middle-side {
     display: none;
@@ -68,11 +165,49 @@ a:hover {
   .en {
     padding-right: 15px;
   }
-  a {
+  .card {
     font-size: 11px;
   }
   span {
     margin: 10px;
     font-size: 13px;
+  }
+
+  /* menu */
+  section,
+  #sekcija {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+  #zatvori:hover,
+  .paragraph:hover {
+    color: rgb(187, 26, 26);
+    transition: all 1s ease-in;
+  }
+  #zatvori {
+    font-size: 11px;
+  }
+
+  .box {
+    display: block;
+    height: 20vh;
+  }
+
+  a {
+    color: white;
+    text-align: center;
+  }
+  .paragraph {
+    font-size: 13px;
+    letter-spacing: 0.7vw;
+    color: white;
+  }
+  .one:hover div,
+  .two:hover div,
+  .three:hover div,
+  .four:hover div,
+  .five:hover div {
+    display: none;
   }
 }
