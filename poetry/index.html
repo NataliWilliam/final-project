@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./poetry.css" />
+    <title>Poetry</title>
+  </head>
+  <body id="main">
+    <nav>
+      <div class="left-side">
+        <a class="card" href="../">Menu</a>
+      </div>
+    </nav>
+    <div class="typewriter flex">
+      <h1>James Douglas Morrison Poetry</h1>
+      <a href="#" class="scroll-down" address="true"></a>
+    </div>
+    <div class="wrapper poem grid position ok">
+      <div class="style">
+        <h3>Orange County Suite</h3>
+        <br />
+        Well I used to know someone fair<br />
+        She had orange ribbons in her hair<br />
+        She was such a trip, she was hardly there<br />
+        But I loved her, just the same<br />
+        There was rain in our window<br />
+        The FM set was ragged<br />
+        But she could talk, yeah <br />
+        We learned to speak<br />
+        And one year has gone by<br />
+        Such a long, long road to seek it<br />
+        All we did was break and freak it<br />
+        We had all that lovers ever had<br />
+        We just blew it and I'm not sad<br />
+        Well, I'm mad and I'm bad<br />
+        And two years have gone by<br />
+        Now her world was bright orange<br />
+        And the fire glowed<br />
+        And her friend had a baby<br />
+        And she lived with us<br />
+        Yeah, we broke through the window<br />
+        Yeah, we knocked on the door<br />
+        Her phone would not answer<br />
+
+        Yeah, but she's still home<br />
+        Now her father has passed over<br />
+        And her sister is a star<br />
+        And her mother smokes diamonds<br />
+        And she sleeps out in the car<br />
+        Yeah, but she remembers Chicago<br />
+        The musicians and guitars<br />
+        And grass by the lake<br />
+        And people who laughed<br />
+        And made her poor heart ache<br />
+        Now we live down in the valley<br />
+        We work out on the farm<br />
+        We climb up to the mountains<br />
+        And everything's fine and I'm still here<br />
+        And you're still there and we're still around<br />
+      </div>
+      <!-- <img class="oc" src="jiiimmmm.jpg" alt="orange c" /> -->
+      <div class="poemTwo">
+        <h3>Awake</h3>
+        <br />
+
+        Shake dreams from your hair <br />
+        My pretty child, my sweet one. <br />
+        Choose the day and <br />
+        choose the sign of your day <br />
+        The day’s divinity <br />
+        First thing you see. <br />
+        A vast radiant beach <br />
+        in a cool jeweled moon <br />
+        Couples naked race down by it’s quiet side <br />
+        And we laugh like soft, mad children <br />
+        Smug in the woolly cotton brains of infancy <br />
+        The music and voices are all around us. <br />
+        Choose, they croon, the Ancient Ones <br />
+        The time has come again <br />
+        Choose now, they croon, <br />
+        Beneath the moon <br />
+        Beside an ancient lake <br />
+        Enter again the sweet forest <br />
+        Enter the hot dream <br />
+        Come with us <br />
+        Everything is broken up and dances.
+      </div>
+    </div>
+
+    <div>
+      <a href="#main" id="myBtn" title="Go to top"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
+        </svg>
+      </a>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      //scroll magic
+
+      let controller = new ScrollMagic.Controller();
+
+      //Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction();
+        poemScroll();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 30 ||
+          document.documentElement.scrollTop > 30
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      //img scr
+
+      function poemScroll() {
+        // grab a ref to the oc img
+
+        // grab ref to poem grid
+        let number = document.querySelector(".typewriter").clientHeight;
+        let poem = document.querySelector(".grid");
+        if (
+          document.body.scrollTop > number - 300 ||
+          document.documentElement.scrollTop > number - 300
+        ) {
+          // oc image add a class to reveal
+          let img = document.querySelector(".oc");
+          img.classList.add("img-scr");
+        }
+        //  else {
+        //   img.classList.remove("img-scr");
+
+        //  }
+      }
+
+      //scroll to the section
+
+      $(function() {
+        $(".scroll-down").click(function() {
+          $("html, body").animate({ scrollTop: $(".ok").offset().top }, "slow");
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0px;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  font-family: arial;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in 3s;
+  transition: all 0.5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  transform: scale(1);
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+nav {
+  padding: 24px;
+}
+.position {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.style {
+  background: white;
+  width: 53%;
+  color: black;
+  border-radius: 5px;
+  padding: 18px;
+  margin-top: 20px;
+  margin-top: 30px;
+  line-height: 25px;
+}
+.poemTwo {
+  background: rgb(150, 10, 10);
+  width: 53%;
+  color: white;
+  border-radius: 5px;
+  padding: 18px;
+  margin-top: 80px;
+  margin-left: 50px;
+  height: 50%;
+  line-height: 25px;
+}
+
+.oc {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 70%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.img-scr {
+  opacity: 1;
+}
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  /* background-color: red; */
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+.flex {
+  background: black;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 66.4px);
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.3em solid red; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 35%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(187, 26, 26);
+  }
+}
+/* .second {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 11;
+  transition: all 0.42s ease-in-out;
+  mix-blend-mode: luminosity;
+  border-radius: 8px;
+}
+.first {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column-start: 4;
+  grid-column-end: 7;
+  grid-row-start: 3;
+  grid-row-end: 11;
+  z-index: 99;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 11vw);
+  grid-auto-rows: 6.5vh;
+  grid-gap: 6px;
+} */
+body {
+  background-color: black;
+}
+.card:hover {
+  color: rgb(187, 26, 26);
+  transition: all 1s ease-in;
+}
+.card {
+  transition: all 0.35s ease-in-out;
+}
+nav > div > a {
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  transition: all 0.55s ease-in-out;
+  /* border: solid 2px;
+  padding: 5px; */
+  color: white;
+}
+
+.poem {
+  color: white;
+}
