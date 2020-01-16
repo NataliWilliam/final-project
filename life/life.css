@@ -10,6 +10,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 nav > div > a {
   text-decoration: none;
   color: white;
@@ -138,7 +139,16 @@ time {
   visibility: visible;
   opacity: 1;
 }
+time {
+  font-family: "Inconsolata", monospace;
+  font-weight: 900;
+}
 
+.timeline {
+  font-family: "Inconsolata", monospace;
+  line-height: 19px;
+  font-weight: 400;
+}
 /* button */
 
 #myBtn {
